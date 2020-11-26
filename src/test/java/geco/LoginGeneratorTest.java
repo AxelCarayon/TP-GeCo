@@ -27,6 +27,11 @@ public class LoginGeneratorTest extends TestCase {
         assertEquals("PDUR",lg.generateLoginForNomAndPrenom("Durand","Paul"));
     }
 
+    @Test
+    public void testIteration() throws Exception {
+        assertEquals("JRAL2",lg.generateLoginForNomAndPrenom("Ralling","John"));
+    }
+
     @After
     public void tearDown() throws Exception {
     }
