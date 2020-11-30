@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+### LoginService
 
-You can use the [editor on GitHub](https://github.com/AxelCarayon/TP-GeCo/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+Classe permettant de générer un Login depuis une liste de login initiaux
 ```markdown
-Syntax highlighted code block
+String[] passwords = {"toto"}
+LoginService ls = new LoginService(passwords);
+```
+###Les Méthodes
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+.add(String) ajoute un login dans la liste des logins existants si celui ci n'existe pas déjà
+```markdown
+ls.add("Axel");
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+.loginExists(String) renvoie si le login existe ou non
+```markdown
+ls.loginExists("Axel");
+```
 
-### Jekyll Themes
+.findAllLoginsStartingWith(String) renvoie tous les logins commençant par le string en paramètre
+```markdown
+ls.findAllLoginsStartingWith("A");
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AxelCarayon/TP-GeCo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+.findAllLogins() renvoie la liste de tous les logins existants
+```markdown
+ls.findAllLogins();
+```
