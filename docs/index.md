@@ -5,7 +5,7 @@ Classe permettant de générer un Login depuis une liste de login initiaux
 String[] passwords = {"toto"}
 LoginService ls = new LoginService(passwords);
 ```
-###Les Méthodes
+### Les Méthodes
 
 .add(String) ajoute un login dans la liste des logins existants si celui ci n'existe pas déjà
 ```markdown
